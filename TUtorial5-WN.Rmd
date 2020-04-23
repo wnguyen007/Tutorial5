@@ -1,0 +1,9 @@
+---
+Title: Learning to rebase
+Author: Will Nguyen
+Date: 23/4/2020
+output:
+    bookdown::html_document2
+keep_md: true
+
+---
