@@ -7,16 +7,25 @@ output:
 keep_md: true
 
 # Libraries
+
+```{r}
 library(tidyverse)
 library(COVID19)
+```
 
 # Examining situation in USA
+
+```{r}
 covid_us <- covid19("USA", level = 2)
 ggplot(covid_us, aes(x = date , y = confirmed)) +
   geom_line() +
   facet_wrap(~id)
+
+```
   
 # Examining situation in USA
+
+```{r}
 covid_us %>% dplyr::filter(id %in%
                                   c("USA, New York",
                                   "USA, Arizona",
@@ -25,3 +34,5 @@ covid_us %>% dplyr::filter(id %in%
                                   ) %>%
 ggplot(aes(x = date , y = confirmed, color = id)) +
   geom_line()  
+```
+
